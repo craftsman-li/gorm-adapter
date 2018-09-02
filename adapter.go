@@ -121,7 +121,7 @@ func (a *Adapter) open() {
 		if a.driverName == "postgres" {
 			db, err = gorm.Open(a.driverName, a.dataSourceName+" dbname=casbin")
 		} else {
-			db, err = gorm.Open(a.driverName, a.dataSourceName+"casbin")
+			db, err = gorm.Open(a.driverName, a.dataSourceName)
 		}
 		if err != nil {
 			panic(err)
